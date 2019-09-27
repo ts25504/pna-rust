@@ -1,0 +1,32 @@
+name: kvs
+version: "0.1.0"
+author: ts25504 <ts25504@gmail.com>
+about: A simple in-memory key/value store
+subcommands:
+    - set:
+        about: Set the value of a string key to a string
+        version: "0.1"
+        author: ts25504 <ts25504@gmail.com>
+        args:
+            - KEY:
+                required: true
+                index: 1
+            - VALUE:
+                required: true
+                index: 2
+    - get:
+        about: Get the string value of a given string key
+        version: "0.1"
+        author: ts25504 <ts25504@gmail.com>
+        args:
+            - KEY:
+                required: true
+                index: 1
+    - rm:
+        about: Remove a given key
+        version: "0.1"
+        author: ts25504 <ts25504@gmail.com>
+        args:
+            - KEY:
+                required: true
+                index: 1
