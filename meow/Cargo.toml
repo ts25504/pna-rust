@@ -1,0 +1,12 @@
+[package]
+name = "meow"
+version = "0.1.0"
+authors = ["唐盛 <tangsheng02@meituan.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+clap = {version = "2.33", features = ["yaml"]}
+dotenv = "0.14.1"
+dotenv_codegen = "0.14.1"
