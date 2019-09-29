@@ -1,12 +1,15 @@
 use std::collections::HashMap;
 
+#[derive(Default)]
 pub struct KvStore {
     store: HashMap<String, String>,
 }
 
 impl KvStore {
     pub fn new() -> KvStore {
-        KvStore { store: HashMap::new() }
+        KvStore {
+            store: HashMap::new(),
+        }
     }
 
     pub fn set(&mut self, key: String, value: String) {
