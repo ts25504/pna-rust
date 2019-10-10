@@ -1,4 +1,5 @@
 use std::collections::HashMap;
+use std::path::Path;
 use crate::Result;
 
 #[derive(Default)]
@@ -11,6 +12,10 @@ impl KvStore {
         KvStore {
             store: HashMap::new(),
         }
+    }
+
+    pub fn open(path: &Path) -> Result<KvStore> {
+        Ok(KvStore::new())
     }
 
     pub fn set(&mut self, key: String, value: String) -> Result<()> {
