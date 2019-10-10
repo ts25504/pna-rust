@@ -3,8 +3,9 @@ extern crate clap;
 
 use clap::App;
 use std::process;
+use kvs::Result;
 
-fn main() {
+fn main() -> Result<()> {
     let yaml = load_yaml!("cli.yml");
     let matches = App::from_yaml(yaml).get_matches();
 
